@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISTE-645_Project-02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Literata:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topnav" aria-label="Page sections">
+  <ul>
+    <li><a href="#intro">The idea</a></li>
+    <li><a href="#start">AI helps</a></li>
+    <li><a href="#hidden">Hidden work</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#access">Counterpoint</a></li>
+    <li><a href="#compare">Compare</a></li>
+    <li><a href="#conclusion">Takeaway</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <h1>A polished screen isn’t a finished design</h1>
+    <p class="lede">I think generative AI should help with UI/UX prototyping, not replace it. It’s great for a first draft. But someone still has to check that the draft works for real people.</p>
+    <p class="byline">Adapted from my Project 01 research paper.</p>
+  </div>
+  <figure class="hero-shot">
+    <img src="polished-screen.png" width="1200" height="876" alt="Hand-drawn wireframe of a jacket store on a phone: a search bar, two empty product boxes labeled Jacket $10 and Jacket 02 $20, a size dropdown, a purple Add to Cart button and the text Your cart (1). Red arrows link sticky notes to the screen asking: Sold out? Then what? Size not available? Does the cart update?">
+    <figcaption>My sketch of questions a screen leaves open. It’s an illustration, not a research finding.</figcaption>
+  </figure>
+</header>
+
+<main>
+  <section class="frame" id="intro" aria-labelledby="intro-h">
+    <h2 id="intro-h">Type a sentence, get a store</h2>
+    <p>Ask an AI tool for a “fashion e-commerce homepage” and you get product cards, a search bar, a sale banner and photos. It looks almost done.</p>
+    <p>But a real shopper searches, filters, adds to a cart, changes quantities, runs into sold-out items, pays, and sometimes makes mistakes. A picture of a checkout button doesn’t show any of that working.</p>
+    <p>My argument is that generative AI has a positive but limited effect on UI/UX design. It should assist wireframing and interactive prototyping, not replace them. A good product still needs connected user flows, user research, accessibility review, usability testing and human judgment.</p>
+    <div class="sticky"><p>AI can draft. People still decide.</p></div>
+    <h3>About my sources</h3>
+    <p>I used three conference studies from ACM and IEEE, plus the W3C’s Web Content Accessibility Guidelines (WCAG) 2.2. They’re credible, but each has limits, so I treat the findings as useful evidence rather than proof for every designer, tool or company.</p>
+    <ul>
+      <li><a href="#src-chen">Chen et al. (2025)</a> studied one company and one generative UI tool.</li>
+      <li><a href="#src-chaudhry">Chaudhry (2024)</a> relied on what UX professionals said, which may differ from what they do.</li>
+      <li><a href="#src-kam">Kamnerddee et al. (2024)</a> tested only 20 people, mostly students.</li>
+    </ul>
+  </section>
+
+  <section class="frame" id="start" aria-labelledby="start-h">
+    <h2 id="start-h">Where AI helps: starting the conversation</h2>
+    <p>Early in a project, a team often hasn’t agreed on the layout, content or features. A generated screen gives everyone something to react to.</p>
+    <p>Say a café asks AI for a homepage with online ordering, a menu and dietary filters. The first draft might hide the menu or lean too hard on photos. That’s still useful, because it raises better questions:</p>
+    <ul>
+      <li>What should visitors see first?</li>
+      <li>What do customers need before they order?</li>
+      <li>Is the site mainly for browsing, ordering or finding directions?</li>
+    </ul>
+    <p>In the GenUI study, participants used generative UI tools to explore rough concepts, make a first draft faster, and share visual ideas with researchers, developers and product managers (<a href="#src-chen">Chen et al., 2025</a>). UX professionals in another study also saw AI as helpful for inspiration, collaboration and talking with stakeholders, not as a tool to take over the whole process (<a href="#src-chaudhry">Chaudhry, 2024</a>).</p>
+    <p class="pull">A generated screen is valuable because it starts a discussion, not because it’s the answer.</p>
+  </section>
+
+  <section class="frame" id="hidden" aria-labelledby="hidden-h">
+    <h2 id="hidden-h">A polished screen can hide missing work</h2>
+    <p>Buttons, cards, menus and icons can look familiar without showing how they work together. Here’s a small example of what I mean.</p>
+
+    <div class="demo">
+      <p class="demo-label">Illustrative demo</p>
+      <p class="demo-note">This is my own made-up example, not a test of any AI tool. I left the buttons unconnected on purpose so you can see the questions a designer has to answer. A tool or a designer could connect them.</p>
+      <div class="mock" id="mock">
+        <div class="screen">
+          <label class="visually" for="demo-search">Search</label>
+          <input id="demo-search" type="text" placeholder="Search jackets">
+          <div class="products" aria-hidden="true"><span></span><span></span></div>
+          <button type="button">Add to cart</button>
+          <button type="button">Checkout</button>
+        </div>
+        <ul class="notes" id="demo-questions">
+          <li>Does the cart update?</li>
+          <li>Can I change the quantity?</li>
+          <li>What if my size is gone?</li>
+          <li>What if my card is declined?</li>
+        </ul>
+        <p class="mock-status" id="mock-status" aria-live="polite"></p>
+        <button
+  type="button"
+  class="toggle"
+  id="toggle-notes"
+  aria-expanded="false"
+  aria-controls="demo-questions">
+  Show the questions
+</button></div>
+    </div>
+
+    <p>Answering those questions turns separate screens into a <strong>user flow</strong>. A prototype lets someone move between pages, make choices, hit errors and finish a task before development begins.</p>
+    <figure class="flow">
+      <img src="user-flow.png" width="1028" height="1196" alt="Hand-drawn flow chart of a shopping trip. Search and filter leads to Pick an item, then the question In stock? If no, a note says Sold out: show similar items, and the arrow returns to Search and filter. If yes, Add to cart, then Pay. If paying fails, a note says feedback with what's wrong, and the user can retry. If it works, Confirmation.">
+      <figcaption>My sketch of a shopping flow. The yellow notes mark the paths that are easy to forget. It’s an illustration, not a research finding.</figcaption>
+    </figure>
+    <p>Researchers found that generated screens often had problems with consistency, connected components, editing and user flows. Screens could look useful on their own but not work together as one product. The tools also sometimes missed details in a prompt or ignored broader requirements (<a href="#src-chen">Chen et al., 2025</a>).</p>
+    <p>So a designer still has to connect the screens, decide how repeated components behave, plan what feedback users get, and test whether the path makes sense. AI can produce a first screen, but it can’t take responsibility for what happens after the first click.</p>
+  </section>
+
+  <section class="frame" id="people" aria-labelledby="people-h">
+    <h2 id="people-h">What people add: research, testing and accessibility</h2>
+
+    <h3>Research: a prompt can’t tell me what users need</h3>
+    <p>A prompt says what I want to build. User needs come from interviews, observation, surveys, journey maps and usability testing.</p>
+    <p>Imagine a site where students book academic advisors. AI could draw a dashboard with a “Book Appointment” button. It couldn’t tell me:</p>
+    <ul>
+      <li>Do students understand the appointment categories?</li>
+      <li>Are they booking from their phones between classes?</li>
+      <li>Do international students need extra guidance?</li>
+      <li>What happens when no times are open?</li>
+    </ul>
+    <p>Those answers should come from students, not assumptions. Without them, a site can look organized and still confuse the people it’s for.</p>
+    <p>UX professionals in one survey stressed human oversight, because designers can weigh culture, emotion, ethical risk and context in ways AI can’t fully grasp. They also worried that AI repeats patterns from existing data and produces generic results (<a href="#src-chaudhry">Chaudhry, 2024</a>). Detailed prompts didn’t fully solve this: users of generative UI tools saw irrelevant elements added, requirements overlooked, and the larger product context missed (<a href="#src-chen">Chen et al., 2025</a>).</p>
+    <p>Before making screens, a team has to define the problem: whose problem it is, what success looks like, and which constraints matter.</p>
+
+    <h3>Testing: what a screen can’t show</h3>
+    <p>A design can look clean and still be hard to use. People misread labels, miss information or get stuck. Those problems show up when real people try real tasks. One study tested this with a fitness app:</p>
+    <dl class="glance">
+      <dt>Who</dt>
+      <dd>20 participants, mostly students</dd>
+      <dt>What they compared</dt>
+      <dd>A human-made prototype and an AI-generated prototype of a fitness app</dd>
+      <dt>What happened</dt>
+      <dd>The human-made version scored slightly higher, but the difference wasn’t statistically significant. Both scored below the typical usability benchmark of 68, so neither was ready to use without more refinement.</dd>
+    </dl>
+    <p>Participants called the human-made prototype more intuitive and smoother. In the AI-generated one, inconsistent element sizes made navigation harder (<a href="#src-kam">Kamnerddee et al., 2024</a>).</p>
+    <p class="limit">This doesn’t mean humans always design perfect interfaces or that AI always fails. It shows that both prototypes needed people to use them and suggest fixes. The small sample also limits how far the result applies.</p>
+
+    <h3>Accessibility: needs review too</h3>
+    <p>WCAG 2.2 lists four requirements that a mockup can’t prove on its own (<a href="#src-w3c">W3C, 2023</a>):</p>
+    <ul class="checks">
+      <li><strong>Keyboard access</strong>Can keyboard users reach every function?</li>
+      <li><strong>Contrast</strong>Can people with low vision read it?</li>
+      <li><strong>Labels and instructions</strong>Can a screen reader identify each button?</li>
+      <li><strong>Error identification</strong>Does the message explain the fix?</li>
+    </ul>
+    <p>Focus order, semantic labels and helpful error feedback only exist once the interaction is built. Designers need to inspect and test the interface, and include people with different access needs.</p>
+  </section>
+
+  <section class="frame" id="access" aria-labelledby="access-h">
+    <h2 id="access-h">The counterargument: AI makes design more available</h2>
+    <p>A student, a small-business owner or a nonprofit may not have the time or budget to explore several design directions by hand. An AI-generated screen can help them picture an idea and explain it to others.</p>
+    <p>Teams can also use fast first drafts to discuss ideas before investing in detailed design (<a href="#src-chen">Chen et al., 2025</a>). That’s a real benefit.</p>
+    <p>The risk is a false sense that the UX work is done. A polished output might tempt a team to skip research, accessibility review or testing, which can lead to confusing navigation, incomplete flows and barriers for people with disabilities.</p>
+    <div class="sticky"><p>Easier to start, not optional to test.</p></div>
+  </section>
+
+  <section class="frame" id="compare" aria-labelledby="compare-h">
+    <h2 id="compare-h">Compare it with an AI-made version</h2>
+    <p>I also have an AI-made webpage for this same project. Open it next to this one and compare.</p>
+    <p>This AI-made version uses the same research and reaches the same conclusion, but it is very different from mine. It has a polished, magazine-style look, with a wordmark, numbered section labels and large headlines. Its two illustrations were also generated with AI. Its demo lets you choose a size, try a sold-out option and see a response, so it shows answers a designer might build. My page works the other way. It uses notes to ask what a screen leaves open, and it uses my own hand-drawn sketches, so it feels like a design being reviewed. I also wrote mine in my own voice, while the AI version reads as more formal.</p>
+    <p><a class="button-link" href="./ai-generated-project02/project02/website/index.html" target="_blank" rel="noopener noreferrer">Open the AI-made version</a></p>
+  </section>
+
+  <section class="frame" id="conclusion" aria-labelledby="conclusion-h">
+    <h2 id="conclusion-h">Let AI draft. Let people decide.</h2>
+    <p>Generative AI has a real place in early ideation, visual communication and first drafts. It can take a team from a sentence in a meeting to a rough concept people can discuss.</p>
+    <p>But people have to move through a website, understand it, recover from mistakes and use it with different devices and assistive technologies. That takes connected interactions, consistent components, user research, accessibility review and usability testing.</p>
+    <p class="pull">AI can generate possibilities. People decide which are useful, ethical, accessible and right for real users.</p>
+    <p>Future research should look at AI-assisted design across industries and user groups, especially how people with disabilities experience AI-generated interfaces.</p>
+  </section>
+
+  <section class="frame sources" id="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Sources</h2>
+    <ol>
+      <li id="src-chaudhry">Chaudhry, B. M. (2024). Concerns and challenges of AI tools in the UI/UX design process: A cross-sectional survey. <i>Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA ’24)</i>. ACM. <a href="https://doi.org/10.1145/3613905.3650878" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3613905.3650878</a></li>
+      <li id="src-chen">Chen, X. A., Knearem, T., &amp; Li, Y. (2025). The GenUI study: Exploring the design of generative UI tools to support UX practitioners and beyond. <i>Proceedings of the Designing Interactive Systems Conference (DIS ’25)</i>. ACM. <a href="https://doi.org/10.1145/3715336.3735780" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3715336.3735780</a></li>
+      <li id="src-kam">Kamnerddee, C., Putjorn, P., &amp; Intarasirisawat, J. (2024). AI-driven design thinking: A comparative study of human-created and AI-generated UI prototypes for mobile applications. <i>2024 8th International Conference on Information Technology (InCIT)</i>. IEEE. <a href="https://doi.org/10.1109/InCIT63192.2024.10810565" target="_blank" rel="noopener noreferrer">https://doi.org/10.1109/InCIT63192.2024.10810565</a></li>
+      <li id="src-w3c">World Wide Web Consortium. (2023). <i>Web Content Accessibility Guidelines (WCAG) 2.2</i>. <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">https://www.w3.org/TR/WCAG22/</a></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <p><strong>AI-use statement.</strong> I used Claude (<a href="https://claude.ai/">Anthropic, 2026</a>) on October 08, 2026, to brainstorm the topic, refine the thesis, organize an initial outline, and understand the academic sources. I located and reviewed the research articles myself, and I wrote and revised the final argument, source evaluation and wording.</p>
+    <p>Created by <span class="todo">Shravani</span></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

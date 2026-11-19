@@ -1,0 +1,3 @@
+# Design Rationale
+
+Because my argument is that AI drafts need review, I made the page feel like a design being reviewed. Short sticky notes ask questions like "What if my size is gone?", while selection handles and a reading-progress bar echo the tools designers use. A top menu stays in view as readers scroll, so they can jump between the argument, the evidence and the sources without losing their place. I used a sans-serif for headings and notes and a serif for body text, so longer paragraphs stay comfortable. The plum and soft pink palette keeps text dark and readable, with lighter purples reserved for notes and handles. My own sketched flow chart marks the easy-to-forget paths with sticky notes.
