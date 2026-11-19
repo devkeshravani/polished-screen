@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="590" viewBox="0 0 640 590">
+<rect width="640" height="590" fill="#e9eddf"/>
+<g fill="none" stroke="#d4d8cc" stroke-width="1"><path d="M0 50H640M0 100H640M0 150H640M0 200H640M0 250H640M0 300H640M0 350H640M0 400H640M0 450H640M0 500H640M0 550H640M50 0V590M100 0V590M150 0V590M200 0V590M250 0V590M300 0V590M350 0V590M400 0V590M450 0V590M500 0V590M550 0V590M600 0V590"/></g>
+<rect x="65" y="58" width="510" height="455" rx="8" fill="#f7f3ea" stroke="#344c3e" stroke-width="2"/>
+<path d="M65 98H575" stroke="#c9cbbf"/>
+<g fill="#555e54"><circle cx="86" cy="78" r="4"/><circle cx="100" cy="78" r="4"/><circle cx="114" cy="78" r="4"/></g>
+<g font-family="Arial, sans-serif" fill="#242923"><text x="95" y="133" font-size="17" font-weight="bold">EVERYDAY / GOODS</text><text x="485" y="133" font-size="12">Cart (0)</text></g>
+<rect x="95" y="157" width="450" height="195" fill="#ded9ca"/>
+<path d="M268 191L235 206L208 250L245 266L257 245V325H383V245L395 266L432 250L405 206L372 191C351 218 289 218 268 191Z" fill="#7b8b75" stroke="#344c3e" stroke-width="2"/>
+<path d="M295 194Q320 217 345 194" fill="none" stroke="#344c3e" stroke-width="2"/>
+<g font-family="Arial, sans-serif" fill="#242923"><text x="95" y="382" font-size="21">Everyday tee</text><text x="510" y="382" font-size="18">$28</text><text x="95" y="409" font-size="13">A simple screen. An unfinished interaction.</text></g>
+<g fill="none" stroke="#555e54"><rect x="95" y="425" width="54" height="32"/><rect x="158" y="425" width="54" height="32"/><rect x="221" y="425" width="54" height="32"/></g>
+<g font-family="Arial, sans-serif" font-size="14" fill="#242923"><text x="117" y="447">S</text><text x="179" y="447">M</text><text x="243" y="447">L</text></g>
+<rect x="325" y="425" width="220" height="40" fill="#344c3e"/>
+<text x="435" y="451" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#ffffff">Add to Cart</text>
+<ellipse cx="435" cy="445" rx="125" ry="35" fill="none" stroke="#99401f" stroke-width="3" transform="rotate(-5 435 445)"/>
+<path d="M449 486Q445 521 396 539" fill="none" stroke="#99401f" stroke-width="2"/>
+<text x="184" y="560" font-family="Georgia, serif" font-size="25" font-style="italic" fill="#99401f">And then what happens?</text>
+</svg>
